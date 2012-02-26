@@ -18,9 +18,6 @@ package jp.senchan.lib.ui.actionbar;
 
 import android.app.Activity;
 import android.content.Context;
-import android.view.Menu;
-import android.view.MenuItem;
-import jp.senchan.lib.R;
 
 /**
  * An extension of {@link jp.senchan.lib.ui.actionbar.ActionBarHelper} that provides Android

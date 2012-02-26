@@ -23,7 +23,6 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import jp.senchan.lib.R;
 
 /**
  * A <em>really</em> dumb implementation of the {@link android.view.MenuItem} interface, that's only

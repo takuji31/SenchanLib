@@ -26,7 +26,6 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 
 import java.util.ArrayList;
-import jp.senchan.lib.R;
 
 /**
  * A <em>really</em> dumb implementation of the {@link android.view.Menu} interface, that's only
