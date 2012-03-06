@@ -3,15 +3,16 @@
  */
 package jp.senchan.lib.ui;
 
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
 import jp.senchan.lib.BaseApp;
-import jp.senchan.lib.ui.actionbar.ActionBarActivity;
 import android.widget.Toast;
 
 /**
  * @author takuji
  *
  */
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends SherlockFragmentActivity {
 
 	public BaseApp app() {
 		return (BaseApp) getApplication();
