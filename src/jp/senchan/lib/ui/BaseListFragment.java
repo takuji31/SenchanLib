@@ -8,7 +8,7 @@ import android.widget.Toast;
 public class BaseListFragment extends SherlockListFragment {
 
 	public BaseApp app() {
-		return getBaseActivity().app();
+		return (BaseApp) getActivity().getApplication();
 	}
 
 	public BaseActivity getBaseActivity() {

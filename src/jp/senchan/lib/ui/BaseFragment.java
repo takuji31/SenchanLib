@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class BaseFragment extends SherlockFragment {
 
 	public BaseApp app() {
-		return getBaseActivity().app();
+		return (BaseApp) getActivity().getApplication();
 	}
 
 	public BaseActivity getBaseActivity() {
