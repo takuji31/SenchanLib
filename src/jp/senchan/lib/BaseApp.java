@@ -21,6 +21,10 @@ public abstract class BaseApp extends Application {
 	}
 	
 	public abstract int getDefaultPrefVersion();
+	
+	public int getInteger(int id) {
+		return getResources().getInteger(id);
+	}
 
 	public boolean isDebugMode(){
 		PackageManager manager = getPackageManager();
