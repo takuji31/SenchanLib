@@ -6,35 +6,19 @@ package jp.senchan.lib.ui;
 import com.actionbarsherlock.app.SherlockFragment;
 
 import jp.senchan.lib.BaseApp;
-import android.widget.Toast;
 
 /**
  * @author takuji
  *
  */
-public class BaseFragment extends SherlockFragment {
+public class BaseFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends SherlockFragment {
 
-	public BaseApp app() {
-		return (BaseApp) getActivity().getApplication();
+	@SuppressWarnings("unchecked")
+    public ActivityClass activity() {
+	    return (ActivityClass) getActivity();
 	}
 
-	public BaseActivity getBaseActivity() {
-		return (BaseActivity) getActivity();
-	}
-
-	public Toast toast(int text_id) {
-		return app().toast(text_id);
-	}
-
-	public Toast toast(String text) {
-		return app().toast(text);
-	}
-
-	public Toast longToast(int text_id) {
-		return app().longToast(text_id);
-	}
-
-	public Toast longToast(String text) {
-		return app().longToast(text);
-	}
+	public AppClass app() {
+        return activity().app();
+    }
 }
