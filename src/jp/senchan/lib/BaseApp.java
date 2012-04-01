@@ -13,31 +13,19 @@ import android.widget.Toast;
 
 public abstract class BaseApp extends Application {
 	public SharedPreferences pref;
-	
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		pref = PreferenceManager.getDefaultSharedPreferences(this);
 	}
-	
+
 	public abstract int getDefaultPrefVersion();
-	
+
 	public int getInteger(int id) {
 		return getResources().getInteger(id);
 	}
 
-	public boolean isDebugMode(){
-		PackageManager manager = getPackageManager();
-		ApplicationInfo appInfo = null;
-		try {
-			appInfo = manager.getApplicationInfo(getPackageName(), 0);
-		} catch (NameNotFoundException e) {
-			Log.e("isDebugMode", e.toString());
-			return false;
-		}
-		return (appInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) == ApplicationInfo.FLAG_DEBUGGABLE;
-	}
-	
 	/**
 	 * Show short toast
 	 *
@@ -102,7 +90,7 @@ public abstract class BaseApp extends Application {
 	public long getPref(String key, long def) {
 		return pref.getLong(key, def);
 	}
-	
+
 	/**
 	 * 設定を代入するメソッド
 	 *
@@ -133,15 +121,15 @@ public abstract class BaseApp extends Application {
 	public void clearPref() {
 		pref.edit().clear().commit();
 	}
-	
+
 	public int getPrefVersion () {
 		return getPref("pref_version", 0);
 	}
-	
+
 	public void updatePrefVersion () {
 		setPref("pref_version", getDefaultPrefVersion());
 	}
-	
+
 	public static boolean deleteFileRecursive(File dirOrFile) {
 		if (dirOrFile.isDirectory()) {//ディレクトリの場合
 			String[] children = dirOrFile.list();//ディレクトリにあるすべてのファイルを処理する
