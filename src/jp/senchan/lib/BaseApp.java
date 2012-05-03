@@ -4,11 +4,7 @@ import java.io.File;
 
 import android.app.Application;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.widget.Toast;
 
 public abstract class BaseApp extends Application {
