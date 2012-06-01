@@ -1,4 +1,4 @@
-package jp.senchan.lib.ui;
+package jp.senchan.lib.view;
 
 import com.actionbarsherlock.app.SherlockListFragment;
 
