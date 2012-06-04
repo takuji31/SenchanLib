@@ -15,7 +15,6 @@ public abstract class ListAdapter<T> extends BaseAdapter {
 	protected Context mContext;
 	
 	public ListAdapter(Context context, List<T> list) {
-		super();
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mList = list;
