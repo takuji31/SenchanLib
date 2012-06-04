@@ -14,10 +14,6 @@ public abstract class ListAdapter<T> extends BaseAdapter {
 	protected List<T> mList;
 	protected Context mContext;
 	
-	protected ListAdapter() {
-		
-	}
-
 	public ListAdapter(Context context, List<T> list) {
 		super();
 		inflater = (LayoutInflater) context
