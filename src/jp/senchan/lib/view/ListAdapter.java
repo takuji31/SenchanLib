@@ -32,8 +32,10 @@ public abstract class ListAdapter<T> extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		if (convertView == null) {
-			convertView = inflater.inflate(getViewLayoutId(position), null);
+		int layoutId = getViewLayoutId(position);
+		if (convertView == null || convertView.getId() != layoutId) {
+			convertView = inflater.inflate(layoutId, null);
+			convertView.setId(layoutId);
 		}
 		return createView(position, getItem(position), convertView);
 	}
