@@ -1,20 +1,19 @@
 package jp.senchan.lib.view;
 
-import java.util.List;
-
+import java.util.ArrayList;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public abstract class ListAdapter<T> extends BaseAdapter {
+public abstract class ArrayListAdapter<T> extends BaseAdapter {
 
 	protected LayoutInflater inflater;
-	protected List<T> mList;
+	protected ArrayList<T> mList;
 	protected Context mContext;
 	
-	public ListAdapter(Context context, List<T> list) {
+	public ArrayListAdapter(Context context, ArrayList<T> list) {
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mList = list;
