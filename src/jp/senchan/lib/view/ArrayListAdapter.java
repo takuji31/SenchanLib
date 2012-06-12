@@ -1,6 +1,7 @@
 package jp.senchan.lib.view;
 
 import java.util.ArrayList;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,5 +49,10 @@ public abstract class ArrayListAdapter<T> extends BaseAdapter {
 	public long getItemId(int position) {
 		return position;
 	}
+
+	public ArrayList<T> getList() {
+		return mList;
+	}
+	
 
 }
