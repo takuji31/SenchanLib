@@ -59,7 +59,6 @@ public class ToastService extends Service {
     	int length = intent.getIntExtra(LENGTH, Toast.LENGTH_SHORT);
         Message msg = mToastHandler.obtainMessage(MESSAGE_DISPLAY, startId, length, messageString);
         mToastHandler.sendMessage(msg);
-        
         return START_NOT_STICKY;
     }
 
