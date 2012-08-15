@@ -1,4 +1,4 @@
-package jp.senchan.lib;
+package jp.senchan.lib.app;
 
 import java.io.File;
 

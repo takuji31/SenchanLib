@@ -1,4 +1,4 @@
-package jp.senchan.lib.view;
+package jp.senchan.lib.app;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;

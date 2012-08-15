@@ -1,11 +1,10 @@
 /**
  *
  */
-package jp.senchan.lib.view;
+package jp.senchan.lib.app;
 
 import com.actionbarsherlock.app.SherlockFragment;
 
-import jp.senchan.lib.BaseApp;
 
 /**
  * @author takuji

@@ -1,4 +1,4 @@
-package jp.senchan.lib.view;
+package jp.senchan.lib.app;
 
 import java.util.ArrayList;
 
