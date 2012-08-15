@@ -9,6 +9,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.widget.Toast;
 
+@SuppressLint("HandlerLeak")
 public class ToastService extends Service {
     public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE";
     public static final String LENGTH = "LENGTH";
@@ -45,7 +46,6 @@ public class ToastService extends Service {
         }
     }
 
-    @SuppressLint("HandlerLeak")
 	@Override
     public void onCreate() {
         super.onCreate();
