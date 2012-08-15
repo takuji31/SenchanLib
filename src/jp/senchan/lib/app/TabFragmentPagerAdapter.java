@@ -1,8 +1,8 @@
-package jp.senchan.lib.view;
+package jp.senchan.lib.app;
 
 import java.util.ArrayList;
 
-import jp.senchan.lib.view.BaseActivity;
+import jp.senchan.lib.app.BaseActivity;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;

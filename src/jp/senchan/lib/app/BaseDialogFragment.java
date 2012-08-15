@@ -1,7 +1,6 @@
-package jp.senchan.lib.view;
+package jp.senchan.lib.app;
 
 import com.actionbarsherlock.app.SherlockDialogFragment;
-import jp.senchan.lib.BaseApp;
 
 public class BaseDialogFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends SherlockDialogFragment {
 
