@@ -1,6 +1,8 @@
 package jp.senchan.lib.widget;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -81,6 +83,19 @@ public class PagingListView extends ListView implements AbsListView.OnScrollList
 	private void init(){
 		setOnScrollListener(this);
 		ViewTreeObserver observer = getViewTreeObserver();
+		observer.addOnGlobalLayoutListener(mLayoutListener);
+	}
+	
+	@SuppressLint("NewApi")
+	@SuppressWarnings("deprecation")
+	public void addOnGlobalLayoutListener(OnGlobalLayoutListener listener) {
+		ViewTreeObserver observer = getViewTreeObserver();
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+			observer.removeOnGlobalLayoutListener(mLayoutListener);
+		} else {
+			observer.removeGlobalOnLayoutListener(mLayoutListener);
+		}
+		observer.addOnGlobalLayoutListener(listener);
 		observer.addOnGlobalLayoutListener(mLayoutListener);
 	}
 
