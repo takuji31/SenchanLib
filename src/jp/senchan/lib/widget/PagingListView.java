@@ -12,6 +12,8 @@ import android.widget.ListView;
 
 public class PagingListView extends ListView implements AbsListView.OnScrollListener {
 	
+	private static final int POST_DELAY_TIME = 50;
+
 	public static interface OnPagingListener {
 		public void onScrollStart(int page);
 		public void onScrollFinish(int page);
@@ -118,7 +120,7 @@ public class PagingListView extends ListView implements AbsListView.OnScrollList
 							mListener.onScrollFinish(mPage);
 						}
 		    	    } 
-		    	}, 50);
+		    	}, POST_DELAY_TIME);
 			}
 	    				    	
 	        break;
@@ -150,7 +152,7 @@ public class PagingListView extends ListView implements AbsListView.OnScrollList
 	    	    	
 	    	    	mListener.onScrollStart(mPage);
 	    	    } 			    	    
-	    	}, 50);
+	    	}, POST_DELAY_TIME);
 	    				    	
 	        break;
 	    }
