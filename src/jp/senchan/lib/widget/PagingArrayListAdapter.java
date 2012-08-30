@@ -27,7 +27,7 @@ public abstract class PagingArrayListAdapter<T> extends ArrayListAdapter<T> {
 	public View createView(int position, T item, View v) {
 		View createdView = createNonLayoutedView(position, item, v);
 		if (mViewHeight != 0) {
-			createdView.getLayoutParams().height = mViewHeight;
+			createdView.setMinimumHeight(mViewHeight);
 		}
 		return v;
 	}
