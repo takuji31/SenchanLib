@@ -66,7 +66,7 @@ public class PagingListView extends ListView implements
 		init();
 	}
 
-	public void setPagingListener(OnPagingListener listener) {
+	public void setOnPagingListener(OnPagingListener listener) {
 		mListener = listener;
 	}
 
