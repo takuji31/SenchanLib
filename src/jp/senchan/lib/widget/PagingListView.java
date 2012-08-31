@@ -32,20 +32,22 @@ public class PagingListView extends ListView implements
 	private OnGlobalLayoutListener mLayoutListener = new OnGlobalLayoutListener() {
 		@Override
 		public void onGlobalLayout() {
-			postDelayed(new Runnable() {
+			if (mViewHeight == 0) {
+				postDelayed(new Runnable() {
 
-				@Override
-				public void run() {
-					mViewHeight = getHeight();
-					ListAdapter adapter = getAdapter();
-					if (adapter != null
-							&& adapter instanceof PagingArrayListAdapter<?>) {
-						((PagingArrayListAdapter<?>) adapter).notifyDataSetChanged(mViewHeight);
-					} else {
-						setAdapter(adapter);
+					@Override
+					public void run() {
+						mViewHeight = getHeight();
+						ListAdapter adapter = getAdapter();
+						if (adapter != null
+								&& adapter instanceof PagingArrayListAdapter<?>) {
+							((PagingArrayListAdapter<?>) adapter).notifyDataSetChanged(mViewHeight);
+						} else {
+							setAdapter(adapter);
+						}
 					}
-				}
-			}, POST_DELAY_TIME);
+				}, POST_DELAY_TIME);
+			}
 		}
 	};
 
@@ -110,9 +112,10 @@ public class PagingListView extends ListView implements
 		observer.addOnGlobalLayoutListener(mLayoutListener);
 	}
 
-	public void setAdapter(PagingArrayListAdapter<?> adapter) {
-		if (mViewHeight != 0) {
-			adapter.setViewHeight(mViewHeight);
+	@Override
+	public void setAdapter(ListAdapter adapter) {
+		if (mViewHeight != 0 && adapter instanceof PagingArrayListAdapter<?>) {
+			((PagingArrayListAdapter<?>) adapter).setViewHeight(mViewHeight);
 		}
 		super.setAdapter(adapter);
 	}
