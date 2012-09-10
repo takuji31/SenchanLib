@@ -1,16 +1,9 @@
-/**
- *
- */
 package jp.senchan.lib.app;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.github.rtyley.android.sherlock.roboguice.activity.RoboSherlockFragmentActivity;
 
 
-/**
- * @author takuji
- *
- */
-public class BaseActivity<AppClass extends BaseApp> extends SherlockFragmentActivity {
+public class BaseActivity<AppClass extends BaseApp> extends RoboSherlockFragmentActivity {
 
 	@SuppressWarnings("unchecked")
     public AppClass app() {

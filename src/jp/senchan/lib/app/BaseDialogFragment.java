@@ -1,8 +1,8 @@
 package jp.senchan.lib.app;
 
-import com.actionbarsherlock.app.SherlockDialogFragment;
+import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockDialogFragment;
 
-public class BaseDialogFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends SherlockDialogFragment {
+public class BaseDialogFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends RoboSherlockDialogFragment {
 
 	public AppClass app() {
 		return activity().app();

@@ -1,9 +1,9 @@
 package jp.senchan.lib.app;
 
-import com.actionbarsherlock.app.SherlockListFragment;
+import com.github.rtyley.android.sherlock.roboguice.fragment.RoboSherlockListFragment;
 
 
-public class BaseListFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends SherlockListFragment {
+public class BaseListFragment<AppClass extends BaseApp, ActivityClass extends BaseActivity<AppClass>> extends RoboSherlockListFragment {
 
 	public AppClass app() {
 		return activity().app();
